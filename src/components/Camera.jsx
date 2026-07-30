@@ -1,3 +1,4 @@
+import ViewFinder from "./ViewFinder";
 import Lens from "./Lens";
 import SearchInput from "./SearchInput";
 import ShutterButton from "./ShutterButton";
