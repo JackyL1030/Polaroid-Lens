@@ -1,3 +1,5 @@
+import '../styles/ViewFinder.css'
+
 export default function ViewFinder(){
     return(
         <div className="viewfinder">
