@@ -1,6 +1,6 @@
 export default function ViewFinder(){
     return(
-        <div className="viewFinder">
+        <div className="viewfinder">
             <div className="viewfinder-label">
                 VIEW FINDER
             </div>

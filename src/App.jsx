@@ -1,4 +1,5 @@
 import '../src/styles/App.css'
+import '../src/styles/ViewFinder.css'
 import Camera from "./components/Camera"
 
 function App() {
