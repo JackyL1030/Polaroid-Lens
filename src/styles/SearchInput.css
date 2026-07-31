@@ -1,0 +1,23 @@
+.search-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-input-container label{
+    color: #2b2b2b;
+    font-weight: 600;
+}
+
+.search-input-container input{
+    padding: 0.75rem 1rem;
+    background: #f8f5ee;
+    color: #2b2b2b;
+    border: 3px solid #2b2b2b;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.search-input-container input:focus{
+    border-color: #5b7c8d;
+}

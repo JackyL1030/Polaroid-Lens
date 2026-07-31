@@ -1,3 +1,5 @@
+import '../styles/SearchInput.css'
+
 export default function SearchInput(){
     return(
         <div className="search-input-container">
