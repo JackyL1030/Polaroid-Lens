@@ -6,11 +6,11 @@ Polaroid Lens is a React application that lets users search for a subject and di
 
 ### Camera Interface
 
-![Polaroid Lens Camera](/screenshots/camera.png)
+![Polaroid Lens Camera](.public/screenshots/camera.png)
 
 ### Printed Photos
 
-![Printed Polaroid Photos](/screenshots/photos.png)
+![Printed Polaroid Photos](.public/screenshots/photos.png)
 
 ## About the Project
 
