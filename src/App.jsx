@@ -1,22 +1,23 @@
-import { useState } from 'react';
-import '../src/styles/App.css'
-import Camera from "./components/Camera"
+import { useState } from "react";
+import "../src/styles/App.css";
+import Camera from "./components/Camera";
 
 function App() {
   // What the user typed
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
   // Printed Polaroid photos
-  const [photos, setPhotos] = useState([])
+  const [photos, setPhotos] = useState([]);
   // Are we currently talking to API
   const [loading, setLoading] = useState(false);
   // Did something go wrong?
-  const [error, setError] = useState("")
+  const [error, setError] = useState("");
 
-  return(
+  return (
     <div>
-      <Camera />
+      <Camera searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <p>{searchTerm}</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
