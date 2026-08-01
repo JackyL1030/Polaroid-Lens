@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../src/styles/App.css";
 import Camera from "./components/Camera";
+import { searchPhotos } from "./services/unsplashService";
 
 function App() {
   // What the user typed
@@ -11,6 +12,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   // Did something go wrong?
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    searchPhotos("sunset");
+  }, []);
 
   return (
     <div>
