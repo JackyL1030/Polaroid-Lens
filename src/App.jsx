@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app-container">
       <Camera
         searchTerm={state.searchTerm}
         dispatch={dispatch}
