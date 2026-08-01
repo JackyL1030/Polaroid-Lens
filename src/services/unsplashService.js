@@ -1,8 +1,10 @@
-export async function searchPhotos(query){
-    const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY
-    const url = `https://api.unsplash.com/search/photos?query=${query}&per_page=9&client_id=${accessKey}`
-    const response = await fetch(url)
-    const data = await response.json()
-    // console.log(data.results)
-    return data.results
+export async function searchPhotos(query) {
+  const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+  // changes photos everytime button is clicked
+  const randomPage = Math.floor(Math.random() * 5) + 1;
+  const url = `https://api.unsplash.com/search/photos?query=${query}&page=${randomPage}&per_page=9&client_id=${accessKey}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  // console.log(data.results)
+  return data.results;
 }
