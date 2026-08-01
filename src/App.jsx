@@ -1,17 +1,13 @@
-import { useEffect, useState } from "react";
-import "../src/styles/App.css";
-import Camera from "./components/Camera";
+import { useEffect, useState, useReducer } from "react";
 import { searchPhotos } from "./services/unsplashService";
+import Camera from "./components/Camera";
+import { cameraReducer, initialState } from "./reducers/cameraReducer";
+import "../src/styles/App.css";
 
 function App() {
-  // What the user typed
-  const [searchTerm, setSearchTerm] = useState("");
-  // Printed Polaroid photos
-  const [photos, setPhotos] = useState([]);
-  // Are we currently talking to API
-  const [loading, setLoading] = useState(false);
-  // Did something go wrong?
-  const [error, setError] = useState("");
+  const [state,dispatch] = useReducer(
+    cameraReducer, initialState
+  )
 
   useEffect(() => {
     searchPhotos("sunset");
@@ -19,8 +15,8 @@ function App() {
 
   return (
     <div>
-      <Camera searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <p>{searchTerm}</p>
+      <Camera searchTerm={state.searchTerm} dispatch={dispatch} />
+      <p>{state.searchTerm}</p>
     </div>
   );
 }
