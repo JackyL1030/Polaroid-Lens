@@ -1,6 +1,8 @@
 import "../styles/SearchInput.css";
 
-export default function SearchInput({ searchTerm, setSearchTerm }) {
+import "../styles/SearchInput.css";
+
+export default function SearchInput({ searchTerm, dispatch }) {
   return (
     <div className="search-input-container">
       <label htmlFor="search-input">Subject</label>
@@ -10,7 +12,12 @@ export default function SearchInput({ searchTerm, setSearchTerm }) {
         type="text"
         placeholder="Take a picture"
         value={searchTerm}
-        onChange={(event) => setSearchTerm(event.target.value)}
+        onChange={(event) =>
+          dispatch({
+            type: "SEARCH_TERM_CHANGED",
+            payload: event.target.value,
+          })
+        }
       />
     </div>
   );

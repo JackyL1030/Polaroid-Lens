@@ -1,17 +1,11 @@
-import { useEffect, useState, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { searchPhotos } from "./services/unsplashService";
 import Camera from "./components/Camera";
 import { cameraReducer, initialState } from "./reducers/cameraReducer";
 import "../src/styles/App.css";
 
 function App() {
-  const [state,dispatch] = useReducer(
-    cameraReducer, initialState
-  )
-
-  useEffect(() => {
-    searchPhotos("sunset");
-  }, []);
+  const [state, dispatch] = useReducer(cameraReducer, initialState);
 
   return (
     <div>
