@@ -6,7 +6,7 @@ import PhotoDisplay from "./PhotoDisplay";
 
 import "../styles/Camera.css";
 
-export default function Camera({ searchTerm, dispatch, onTakePhoto }) {
+export default function Camera({ searchTerm, dispatch, onTakePhoto, photos }) {
   return (
     <div className="camera">
       <div className="camera-title">Polaroid Lens</div>
@@ -14,7 +14,7 @@ export default function Camera({ searchTerm, dispatch, onTakePhoto }) {
       <Lens />
       <SearchInput searchTerm={searchTerm} dispatch={dispatch} />
       <ShutterButton onTakePhoto={onTakePhoto} />
-      <PhotoDisplay />
+      <PhotoDisplay photos={photos} />
     </div>
   );
 }

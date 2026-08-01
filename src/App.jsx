@@ -32,6 +32,7 @@ function App() {
         searchTerm={state.searchTerm}
         dispatch={dispatch}
         onTakePhoto={handleTakePhoto}
+        photos={state.photos}
       />
       <p>{state.searchTerm}</p>
     </div>

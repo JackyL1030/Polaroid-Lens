@@ -1,5 +1,9 @@
-export default function PhotoDisplay(){
-    return(
-        <div>PhotoDisplay Component</div>
-    )
+export default function PhotoDisplay({ photos }) {
+  console.log(photos);
+
+  return (
+    <div>
+      PhotoDisplay Component
+    </div>
+  );
 }
