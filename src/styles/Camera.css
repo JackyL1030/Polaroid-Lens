@@ -1,5 +1,5 @@
 .camera {
-  width: 400px;
+  width: 550px;
   max-width: 90vw;
   padding: 1.5rem;
   background-color: #e8dcc5;
@@ -9,4 +9,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.camera-title{
+  width: 100%;
+  text-align:center;
 }
