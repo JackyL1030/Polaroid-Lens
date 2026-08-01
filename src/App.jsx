@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import { searchPhotos } from "./services/unsplashService";
 import Camera from "./components/Camera";
+import PhotoDisplay from "./components/PhotoDisplay";
 import { cameraReducer, initialState } from "./reducers/cameraReducer";
 import "../src/styles/App.css";
 
@@ -13,7 +14,6 @@ function App() {
         type: "SEARCH_STARTED",
       });
       const photos = await searchPhotos(state.searchTerm);
-      console.log(photos)
       dispatch({
         type: "SEARCH_SUCCESS",
         payload: photos,
@@ -34,7 +34,7 @@ function App() {
         onTakePhoto={handleTakePhoto}
         photos={state.photos}
       />
-      <p>{state.searchTerm}</p>
+      <PhotoDisplay photos={state.photos} />
     </div>
   );
 }
