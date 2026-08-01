@@ -9,11 +9,15 @@ function App() {
   const [state, dispatch] = useReducer(cameraReducer, initialState);
 
   async function handleTakePhoto() {
+    if (!state.searchTerm.trim()) {
+      return;
+    }
     try {
       dispatch({
         type: "SEARCH_STARTED",
       });
       const photos = await searchPhotos(state.searchTerm);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       dispatch({
         type: "SEARCH_SUCCESS",
         payload: photos,
