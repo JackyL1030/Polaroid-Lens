@@ -2,6 +2,9 @@
 
 Polaroid Lens is a React application that lets users search for a subject and display related photos from the Unsplash API. The goal of this project was to create a camera-inspired interface that feels like taking and printing instant photos.
 
+## Live Demo
+[View Polaroid Lens]https://polaroid-lens.netlify.app/
+
 ## About the Project
 
 I built this project to practice working with React components, state management, APIs, and CSS styling. Instead of displaying photos in a standard gallery, I wanted the results to appear as printed Polaroid photos beneath a camera interface.
