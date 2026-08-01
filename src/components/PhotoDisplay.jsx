@@ -3,7 +3,9 @@ export default function PhotoDisplay({ photos }) {
 
   return (
     <div>
-      PhotoDisplay Component
+      {photos.map((photo) => (
+        <img key={photo.id} src={photo.urls.small} />
+      ))}
     </div>
   );
 }
