@@ -21,3 +21,7 @@
 .search-input-container input:focus{
     border-color: #5b7c8d;
 }
+
+#search-input{
+    text-align:center;
+}
