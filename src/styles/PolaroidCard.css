@@ -1,0 +1,14 @@
+.polaroid{
+    background:white;
+    padding:0.75rem;
+    padding-bottom:2rem;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+    border-radius:4px;
+}
+
+.polaroid img{
+    width:100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display:block;
+}
