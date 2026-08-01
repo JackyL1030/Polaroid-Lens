@@ -25,3 +25,9 @@
   color: #e8dcc5;
   font-size: 1.2rem;
 }
+
+.viewfinder-label,
+.screen {
+  width: 100%;
+  box-sizing: border-box;
+}
