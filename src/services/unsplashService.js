@@ -3,6 +3,6 @@ export async function searchPhotos(query){
     const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${accessKey}`
     const response = await fetch(url)
     const data = await response.json()
-    console.log(data)
-    return data
+    // console.log(data.results)
+    return data.results
 }
