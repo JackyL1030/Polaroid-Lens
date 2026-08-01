@@ -33,6 +33,7 @@ function App() {
         dispatch={dispatch}
         onTakePhoto={handleTakePhoto}
         photos={state.photos}
+        loading={state.loading}
       />
       <PhotoDisplay photos={state.photos} />
     </div>

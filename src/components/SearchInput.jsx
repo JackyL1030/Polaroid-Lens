@@ -1,7 +1,5 @@
 import "../styles/SearchInput.css";
 
-import "../styles/SearchInput.css";
-
 export default function SearchInput({ searchTerm, dispatch }) {
   return (
     <div className="search-input-container">
